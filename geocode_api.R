@@ -11,7 +11,7 @@ function(address) {
     return(list(error = "Please provide an address."))
   }
   
-  result <- geocode(dataframe(address = address), address = "address", method = 'osm')
+  result <- geocode(data.frame(address = address), address = "address", method = 'osm')
   
   if (nrow(result) == 0) {
     return(list(error = "No results found for the given address."))
